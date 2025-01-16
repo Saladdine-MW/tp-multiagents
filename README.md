@@ -9,7 +9,7 @@ Il existent de nombreux modèles de vision, en voici quelques uns :
 - Idefics https://huggingface.co/HuggingFaceM4/Idefics3-8B-Llama3
 - Phi-3 vision https://huggingface.co/microsoft/Phi-3-vision-128k-instruct
 
-Dans ce TP, vous allez mettre en place le modèle multi-modal **MiniCPM-o-2.6**.
+Dans ce TP, vous allez mettre en place le modèle multi-modal **MiniCPM-o-2.6** en vous inspirant des instructions fournies ici https://huggingface.co/openbmb/MiniCPM-o-2_6. 
 
 Pour que le modèle de 8 milliards de paramètres fonctionne sous google colab, vous devrez le quantiser en utilisant les bibliothèques **bitsandbytes** et **accelerate**.
 
