@@ -1,8 +1,26 @@
-# Générateur d'articles avec un système multi agents
+# Modèles multi modaux et systèmes multi agents avec langgraph
+
+## Modèle de vision
+
+Les modèles de vision par ordinateur ont aujourd'hui des performances remarquables grâce au modèle _transformers_. Les modèles de vision prennent une image en entrée et fournissent en sortie une réponse à une question sur cette image. Capable de raisonner, ils peuvent par exemple décrire une image, compter des éléments ou repérer des éléments anormaux.
+
+Il existent de nombreux modèles de vision, en voici quelques uns : 
+- MiniCPM 2.6 https://huggingface.co/openbmb/MiniCPM-V-2_6
+- Idefics https://huggingface.co/HuggingFaceM4/Idefics3-8B-Llama3
+- Phi-3 vision https://huggingface.co/microsoft/Phi-3-vision-128k-instruct
+
+Dans ce TP, vous allez mettre en place le modèle multi-modal **MiniCPM-o-2.6**.
+
+Pour que le modèle de 8 milliards de paramètres fonctionne sous google colab, vous devrez le quantiser en utilisant les bibliothèques **bitsandbytes** et **accelerate**.
+
+**Exercice** : mettre en place le modèle de vision **MiniCPM-o-2.6** et tester quelques prompts sur des images de votre choix.
+
+
+## Multi agents avec langgraph
 
 Dans ce TP, vous allez mettre en oeuvre un système multi agents pour construire un article structuré sur un thème que l'utilisateur donnera en entrée. Pour mettre en oeuvre les agents, vous utiliserez **langgraph**
 
-## Agents
+### Agents
 
 * Plannifieur : agent définissant le plan de l'article
 * Recherche sur internet : agent effectuant des recherche sur internet. Utilisez [Tavily](https://docs.tavily.com/docs/python-sdk/tavily-search/getting-started)
@@ -14,11 +32,13 @@ Vos agents s'organiseront comme suit :
 
 ![agents](./flow.png)
 
-## LLM
+### LLM
 
 Vous utiliserez **Ollama** comme serveur d'inférence avec le LLM de votre choix. **Qwen2.5:14b** est un exemple de LLM donnant des résultats satisfaisants.
 
-## Exemples de génération
+**Exercice** : mettre en place les agents ci-dessous avec langgraph et tester sur la tâche de votre choix.
+
+### Exemples de génération
 
 Tâche : Actualité récente de l'Université de Toulon et de ses filières en informatique en particulier
 
